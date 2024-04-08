@@ -140,7 +140,10 @@
                 <div
                     class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"
                 >
-                    <button class="btn btn-primary" @click.prevent="handleSubmit">
+                    <button
+                        class="btn btn-primary"
+                        @click.prevent="handleSubmit"
+                    >
                         Submit!
                     </button>
                 </div>
@@ -200,5 +203,4 @@ export default {
         },
     },
 };
-    
 </script>
