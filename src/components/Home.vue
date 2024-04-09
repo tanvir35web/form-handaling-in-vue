@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>This is the Home Component</h1>
+        <hr />
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
             aperiam quaerat nobis dolores quis quia, deserunt soluta eveniet
@@ -26,5 +27,21 @@
             Voluptatem, deserunt unde distinctio ipsa qui, nemo sunt itaque modi
             libero rem facere labore!
         </p>
+        <h3>Our Services</h3>
+        <ul>
+            <li v-for="item in menu" :key="item">{{ item }}</li>
+        </ul>
     </div>
 </template>
+
+<script>
+import { serviceMenu } from "./mixin.js";
+export default {
+    data() {
+        return {
+            name: "Home",
+        };
+    },
+    mixins: [serviceMenu],
+};
+</script>

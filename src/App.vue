@@ -1,8 +1,13 @@
 <template>
     <div id="app">
-        <button @click="componentToRender = 'homeComponent'">Home</button>
-        <button @click="componentToRender = 'counterComponent'">Counter</button>
-        <button @click="componentToRender = 'userForm'">Form</button>
+        <div class="allTabButtons">
+            <button class="btn btn-info" @click="componentToRender = 'homeComponent'">Home</button>
+            <button class="btn btn-info" @click="componentToRender = 'counterComponent'">
+                Counter
+            </button>
+            <button class="btn btn-info" @click="componentToRender = 'userForm'">Form</button>
+            <button class="btn btn-info" @click="componentToRender = 'Test'">Test</button>
+        </div>
 
         <keep-alive>
             <component :is="componentToRender"></component>
@@ -14,6 +19,7 @@
 import homeComponent from "./components/Home.vue";
 import counterComponent from "./components/Counter.vue";
 import userForm from "./components/userForm.vue";
+import Test from "./components/Test.vue";
 
 export default {
     data() {
@@ -25,6 +31,20 @@ export default {
         homeComponent,
         counterComponent,
         userForm,
+        Test,
     },
 };
 </script>
+
+<style>
+.allTabButtons {
+    font-size: 20px;
+}
+
+button {
+    margin-left: 5px;
+}
+body{
+    padding: 10px;
+}
+</style>
