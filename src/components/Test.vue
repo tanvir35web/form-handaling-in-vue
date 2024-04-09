@@ -9,7 +9,7 @@
         <img class="cover-photo" :src="cover" alt="cover photo from linkedIn" />
         <img class="profile-photo" :src="photo" alt="tanvir profile photo" v-show="isShow" />
        </div>
-       <button @click="handleProfileShow"  >Show Profile</button>
+       <button class="btn btn-success" @click="handleProfileShow"  >Show Profile</button>
     </div>
 </template>
 

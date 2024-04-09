@@ -1,12 +1,33 @@
 <template>
     <div id="app">
         <div class="allTabButtons">
-            <button class="btn btn-info" @click="componentToRender = 'homeComponent'">Home</button>
-            <button class="btn btn-info" @click="componentToRender = 'counterComponent'">
+            <button
+                class="btn btn-info"
+                @click="componentToRender = 'homeComponent'"
+            >
+                Home
+            </button>
+            <button
+                class="btn btn-info"
+                @click="componentToRender = 'counterComponent'"
+            >
                 Counter
             </button>
-            <button class="btn btn-info" @click="componentToRender = 'userForm'">Form</button>
-            <button class="btn btn-info" @click="componentToRender = 'Test'">Test</button>
+            <button
+                class="btn btn-info"
+                @click="componentToRender = 'userForm'"
+            >
+                Form
+            </button>
+            <button class="btn btn-info" @click="componentToRender = 'Test'">
+                Test
+            </button>
+            <button
+                class="btn btn-info"
+                @click="componentToRender = 'ApiOperation'"
+            >
+                Api Cards
+            </button>
         </div>
 
         <keep-alive>
@@ -20,6 +41,7 @@ import homeComponent from "./components/Home.vue";
 import counterComponent from "./components/Counter.vue";
 import userForm from "./components/userForm.vue";
 import Test from "./components/Test.vue";
+import ApiOperation from "./components/ApiOperation.vue";
 
 export default {
     data() {
@@ -32,6 +54,7 @@ export default {
         counterComponent,
         userForm,
         Test,
+        ApiOperation,
     },
 };
 </script>
@@ -44,7 +67,7 @@ export default {
 button {
     margin-left: 5px;
 }
-body{
+body {
     padding: 10px;
 }
 </style>

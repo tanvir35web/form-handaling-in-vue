@@ -199,7 +199,18 @@ export default {
     methods: {
         handleSubmit() {
             this.isSubmit = true;
-            console.log(this.userData);
+            this.$http.post("https://jsonplaceholder.typicode.com/posts", {
+                Email: this.userData.email,
+                Password: this.userData.password,
+                Age: this.userData.age,
+                Message: this.userData.massage,
+                EmailType: this.emailType,
+                Gender: this.gender,
+                Priority: this.priority,
+                Switched: this.isSubmit,
+            }).then(response => {
+                console.log(response);
+            });
         },
     },
 };
