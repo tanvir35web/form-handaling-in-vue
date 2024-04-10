@@ -33,6 +33,7 @@
         <keep-alive>
             <component :is="componentToRender"></component>
         </keep-alive>
+        <Test :book="msg"/>
     </div>
 </template>
 
@@ -47,6 +48,7 @@ export default {
     data() {
         return {
             componentToRender: "homeComponent",
+            msg : "Hello, I am props!",
         };
     },
     components: {

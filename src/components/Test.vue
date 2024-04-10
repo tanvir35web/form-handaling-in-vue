@@ -10,6 +10,8 @@
         <img class="profile-photo" :src="photo" alt="tanvir profile photo" v-show="isShow" />
        </div>
        <button class="btn btn-success" @click="handleProfileShow"  >Show Profile</button>
+       <hr> <br> <hr>
+       <h2>{{ book }}</h2>
     </div>
 </template>
 
@@ -17,6 +19,7 @@
 import tanvirPhoto from "../../public/tanvir.jpg";
 import coverPhoto from "../../public/cover.jpg";
 export default {
+    props: ['book'],
     data() {
         return {
             color: "green",
