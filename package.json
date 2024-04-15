@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "vue": "^2.7.7",
-    "vue-resource": "^1.5.3"
+    "vue-resource": "^1.5.3",
+    "vue-router": "^2.8.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
