@@ -1,32 +1,47 @@
 <template>
-    <div id="app" class="container ">
+    <div id="app" class="container">
         <ul class="nav-links">
-            <li>
-                <router-link to="/">Home</router-link>
-            </li>
-            <li>
-                <router-link to="/about">About</router-link>
-            </li>
-            <li>
-                <router-link to="/contact">Contact</router-link>
-            </li>
+            <router-link active-class="active" exact class="nav-item" tag="li" to="/">Home</router-link>
+            <router-link active-class="active" exact class="nav-item" tag="li" to="/about">About</router-link>
+            <router-link active-class="active" exact class="nav-item" tag="li" to="/contact/1">Contact-1</router-link>
+            <router-link active-class="active" exact class="nav-item" tag="li" to="/contact/2">Contact-2</router-link>
+            <router-link active-class="active" exact class="nav-item" tag="li" to="/customer">Customer</router-link>
         </ul>
-        <hr>
+        <hr />
         <router-view></router-view>
     </div>
 </template>
 
-<style> 
+<style>
+.active{
+    background-color: rgb(81, 49, 112)!important;
+}
 .nav-links {
     list-style-type: none;
     display: flex;
     color: white;
     font-size: 20px;
     padding-top: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-li {
-    padding-right: 50px;
+.nav-item {
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: rgb(73, 73, 73);
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    
+}
+.nav-item:hover {
+    margin-right: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: rgb(81, 49, 112);
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    
 }
 </style>

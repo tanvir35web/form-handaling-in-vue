@@ -16,9 +16,7 @@ export default {
         };
     },
     methods: {
-        increment() {
-            this.count++;
-        },
+       
         decrement() {
             this.count--;
         },
@@ -26,5 +24,10 @@ export default {
             this.count = 0;
         },
     },
+    computed: {
+        increment() {
+            this.count++;
+        },
+    }
 };
 </script>
